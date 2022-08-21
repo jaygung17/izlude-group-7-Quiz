@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="hye-sI-FcP">
             <objects>
-                <viewController id="6yV-pU-Jd1" sceneMemberID="viewController">
+                <viewController id="6yV-pU-Jd1" customClass="ViewController" customModule="izlude_group_7_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bah-eO-lUd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,29 +22,38 @@
                                     <constraint firstAttribute="width" secondItem="ocp-PE-hAW" secondAttribute="height" multiplier="1:1" id="qsL-2F-Ibb"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-300" translatesAutoresizingMaskIntoConstraints="NO" id="4iQ-RR-Lfy">
-                                <rect key="frame" x="10" y="424" width="394" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4iQ-RR-Lfy">
+                                <rect key="frame" x="150" y="424" width="114" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efY-ei-2GJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="331.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="circle.fill" catalog="system">
                                             <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="BlueChairTapped:" destination="6yV-pU-Jd1" eventType="touchUpInside" id="zyH-Kq-IOg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMP-9d-b2S">
-                                        <rect key="frame" x="31.5" y="0.0" width="331" height="31"/>
+                                        <rect key="frame" x="38" y="0.0" width="38" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="circle.fill" catalog="system">
                                             <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="RedChairTapped:" destination="6yV-pU-Jd1" eventType="touchUpInside" id="eJ4-w6-Ee2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z45-qN-ciC">
-                                        <rect key="frame" x="62.5" y="0.0" width="331.5" height="31"/>
+                                        <rect key="frame" x="76" y="0.0" width="38" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="circle.fill" catalog="system">
                                             <color key="baseForegroundColor" systemColor="systemPinkColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="PinkChairTapped:" destination="6yV-pU-Jd1" eventType="touchUpInside" id="9nX-T0-OhQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -59,6 +68,9 @@
                                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="50"/>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -82,11 +94,10 @@
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6v-Ty-bh0">
-                                <rect key="frame" x="20" y="556" width="4402" height="232"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6v-Ty-bh0">
+                                <rect key="frame" x="20" y="556" width="374" height="215"/>
                                 <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -100,17 +111,30 @@
                             <constraint firstItem="Eeq-Ou-ROG" firstAttribute="leading" secondItem="FPv-YX-Ocm" secondAttribute="leading" constant="20" id="MUl-d3-g0U"/>
                             <constraint firstAttribute="bottom" secondItem="CGp-jF-24I" secondAttribute="bottom" id="OKo-nh-iyf"/>
                             <constraint firstItem="kAe-RH-kg8" firstAttribute="top" secondItem="Eeq-Ou-ROG" secondAttribute="bottom" constant="20" id="Syb-EG-pgm"/>
+                            <constraint firstItem="A6v-Ty-bh0" firstAttribute="top" secondItem="kAe-RH-kg8" secondAttribute="bottom" constant="20" id="WwO-Gv-p8S"/>
                             <constraint firstItem="ocp-PE-hAW" firstAttribute="leading" secondItem="FPv-YX-Ocm" secondAttribute="leading" id="Zj2-60-aer"/>
                             <constraint firstItem="4iQ-RR-Lfy" firstAttribute="top" secondItem="ocp-PE-hAW" secondAttribute="bottom" constant="10" id="cWv-26-OzZ"/>
                             <constraint firstItem="FPv-YX-Ocm" firstAttribute="trailing" secondItem="kAe-RH-kg8" secondAttribute="trailing" constant="20" id="fCY-MF-Pkj"/>
                             <constraint firstItem="FPv-YX-Ocm" firstAttribute="trailing" secondItem="Eeq-Ou-ROG" secondAttribute="trailing" constant="20" id="fOA-iS-wX4"/>
+                            <constraint firstItem="A6v-Ty-bh0" firstAttribute="leading" secondItem="FPv-YX-Ocm" secondAttribute="leading" constant="20" id="kTi-9P-fbW"/>
                             <constraint firstItem="CGp-jF-24I" firstAttribute="trailing" secondItem="FPv-YX-Ocm" secondAttribute="trailing" id="lfs-50-S4E"/>
-                            <constraint firstItem="FPv-YX-Ocm" firstAttribute="trailing" secondItem="4iQ-RR-Lfy" secondAttribute="trailing" constant="10" id="nQ7-lM-wws"/>
+                            <constraint firstItem="FPv-YX-Ocm" firstAttribute="trailing" secondItem="4iQ-RR-Lfy" secondAttribute="trailing" constant="150" id="nQ7-lM-wws"/>
+                            <constraint firstAttribute="trailing" secondItem="A6v-Ty-bh0" secondAttribute="trailing" constant="20" id="ntw-9U-YT0"/>
                             <constraint firstItem="ocp-PE-hAW" firstAttribute="trailing" secondItem="FPv-YX-Ocm" secondAttribute="trailing" id="sdv-Qd-w9A"/>
                             <constraint firstItem="kAe-RH-kg8" firstAttribute="leading" secondItem="FPv-YX-Ocm" secondAttribute="leading" constant="20" id="tta-gd-raw"/>
-                            <constraint firstItem="4iQ-RR-Lfy" firstAttribute="leading" secondItem="FPv-YX-Ocm" secondAttribute="leading" constant="10" id="tvs-ps-DHT"/>
+                            <constraint firstItem="4iQ-RR-Lfy" firstAttribute="leading" secondItem="FPv-YX-Ocm" secondAttribute="leading" constant="150" id="tvs-ps-DHT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="BlueChairButton" destination="efY-ei-2GJ" id="U8l-z7-wL8"/>
+                        <outlet property="CartLabel" destination="eig-iL-6tX" id="WJc-ZU-wVw"/>
+                        <outlet property="Chair" destination="ocp-PE-hAW" id="xVk-tM-QNC"/>
+                        <outlet property="DescriptionLabel" destination="A6v-Ty-bh0" id="DEw-Gb-jzH"/>
+                        <outlet property="LabelChair" destination="Eeq-Ou-ROG" id="eWd-ow-gbx"/>
+                        <outlet property="PinkChairButton" destination="Z45-qN-ciC" id="wgQ-VB-E5Y"/>
+                        <outlet property="PriceLabel" destination="kAe-RH-kg8" id="AnP-qf-jfd"/>
+                        <outlet property="RedChairButton" destination="UMP-9d-b2S" id="33J-Pk-jqu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xy4-Qe-Bl6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
